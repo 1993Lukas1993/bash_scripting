@@ -1,12 +1,14 @@
 #!/bin/bash
 
+COMMAND=htop
 
-MYNUM=200
-
-if [ $MYNUM -eq 200 ]
+if command -v $COMMAND
 then
-    echo "the condition is true"
+    echo "$COMMAND is available, lets run it..."
 else
-    echo "the condition is false"
+    echo "$COMMAND is not available, installing it..."
+    sudo apt update && sudo apt install -y $COMMAND
 fi
+
+$COMMAND
 
