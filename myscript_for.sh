@@ -1,13 +1,9 @@
 #!/bin/bash
 
-for n in {1..10}
+for f in logfiles/*.log
 do
-    echo $n
-    sleep 1
+    tar -cvzf $f.tar.gz $f
 done
-
-echo " This is outside of the for loop"
-
 
 
 
