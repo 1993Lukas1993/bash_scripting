@@ -1,14 +1,8 @@
 #!/bin/bash
 
-COMMAND=htop
-
-if command -v $COMMAND
+if [ -f ~/myfile ]
 then
-    echo "$COMMAND is available, lets run it..."
+	echo "file exists"
 else
-    echo "$COMMAND is not available, installing it..."
-    sudo apt update && sudo apt install -y $COMMAND
+	echo "file does not exist"
 fi
-
-$COMMAND
-
