@@ -1,10 +1,10 @@
 #!/bin/bash
 
+MYVAR=1
 
-while [ -f ~/testfile ]
+while [ $MYVAR -le 10 ]
 do
-    echo "As of $(date), The test file exist"
-    sleep 5
+	echo $MYVAR
+	MYVAR=$(( $MYVAR +1 ))
+	sleep 1
 done
-
-echo "As of $(date), The file no longer exist"
